@@ -3,6 +3,7 @@ function preload(){
   mbg = loadImage ("haha.jpg")
   lc = loadSound ("mow.mp3")
   tg = loadSound ("tiger.mp3")
+  sk = loadSound ("smokee.mp3")
 }
 
 function setup() {
@@ -28,21 +29,25 @@ function draw() {
   ms.setVolume(kunal.value())
   lc.setVolume(kunal.value())
   tg.setVolume(kunal.value())
+  sk.setVolume(kunal.value())
 }  
   function stop(){
     ms.stop()
     tg.stop()
     lc.stop()
+    sk.stop
   }
 
 function wind(){
   lc.stop()
+  sk.stop
   tg.stop()
   ms.play()
 }
 
 function starttiger(){
   ms.stop()
+  sk.stop
   lc.stop()
   tg.play()
 }
@@ -50,7 +55,14 @@ function starttiger(){
 function startlocked(){
   ms.stop()
   tg.stop()
+  sk.stop
   lc.play()
+}
+function startsmoke(){
+  ms.stop
+  tg.stop
+  lc.stop
+  sk.play
 }
 
 
