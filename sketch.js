@@ -11,6 +11,7 @@ function setup() {
   kp = createButton("Behti Hawa Sa Tha Woh")
   bh = createButton ("Tiger's Theme")
   ji = createButton ('Locked up ')
+  ss = createButton ("Smoke Shisha")
   background(mbg);
   textSize(100)
   text("Song",10,height/2)
@@ -19,6 +20,7 @@ function setup() {
   kp.mousePressed (wind)
   bh.mousePressed (starttiger)
   ji.mousePressed (startlocked)
+  ss.mousePredded (startsmoke)
 }
 
 function draw() {
